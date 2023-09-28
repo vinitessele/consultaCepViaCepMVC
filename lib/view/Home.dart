@@ -1,6 +1,4 @@
-import 'dart:convert';
-import 'package:appconsumirapi/controller/consulta_controller.dart';
-
+import 'package:appconsumirapi/controller/consulta_controller.dart' show cepController;
 import 'package:appconsumirapi/model/endereco_model.dart';
 import 'package:flutter/material.dart';
 

@@ -11,8 +11,14 @@ class cepController {
       final response = await http.get(Uri.parse(url));
 
       Map<String, dynamic> retorno = json.decode(response.body);
-      Endereco endereco = Endereco(retorno["cep"], retorno["logradouro"], retorno["complemento"], retorno["bairro"], retorno["localidade"], retorno["uf"], retorno["ibge"]);
-      print(endereco.logradouro);  
+      Endereco endereco = Endereco(
+          retorno["cep"],
+          retorno["logradouro"],
+          retorno["complemento"],
+          retorno["bairro"],
+          retorno["localidade"],
+          retorno["uf"],
+          retorno["ibge"]);
       return endereco;
     } catch (ex) {
       throw Exception(ex);
